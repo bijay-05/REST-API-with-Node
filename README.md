@@ -1,6 +1,16 @@
 # REST-API-with-Node
 
-In this project, we will create a REST API to perform CRUD operations on a Postgresql database. The API will perform actions like creating, updating, deleting and reading different todos available in the database.
+In this project, we will create a REST API to perform CRUD operations using Node framework, `express`. The API will perform actions like creating, updating, deleting and reading different todos available in the database.
+
+- For query building, knex is used.
+- This node app has endpoints:
+    - GET `/todos` - to get all the todos.
+    - GET `/todos/:id` - to get a single todo.
+    - POST `/todos` - to add a new todo.
+    - PUT `/todos/:id` - to update a todo.
+    - DELETE `/todos/:id` - to delete a todo.
+ 
+> I have used knex for query building and execution with postgres as the database.  
 
 ## Directory Structure
 `REST-API-with-Node`
@@ -33,9 +43,12 @@ In this project, we will create a REST API to perform CRUD operations on a Postg
 - models deal with data in the database
 - middlewares for handling errors if the routes or URLs donot match 
 
-The functions in models are called in services and similarly, functions in one directory are imported in scripts in other directory in below order.
-
-`models` => `services` => `controllers` => `routes` => `index.js`
+- The flow of the request is as below.  
+    - A client requests the server for a resource.
+    - The routes in the server are matched with the request.  
+    - The controller is called with the request and response objects, It calls the service.   
+    - The service calls the model to perform the database operations.
+    - The model performs the database operations and returns the result to the service then the flow is reversed till the response is sent to the client. 
 
 The request-response cycle follows below order.
 
