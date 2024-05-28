@@ -4,8 +4,9 @@
   "description": "REST API for CRUD operations with Node",
   "main": "index.js",
   "scripts": {
-    "server:up": "node index.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "server:up": "nodemon",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "migrate": "knex migrate:latest --knexfile src/db/knexfile.js"
   },
   "keywords": [
     "node"
@@ -13,9 +14,12 @@
   "author": "bijay-05",
   "license": "ISC",
   "devDependencies": {
-    "express": "^4.19.2"
+    "express": "^4.19.2",
+    "nodemon": "^3.1.1"
   },
   "dependencies": {
-    "knex": "^3.1.0"
+    "express": "^4.19.2",
+    "knex": "^3.1.0",
+    "pg": "^8.11.5"
   }
 }
