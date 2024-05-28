@@ -5,7 +5,9 @@ In this project, we will create a REST API to perform CRUD operations on a Postg
 ## Directory Structure
 `REST-API-with-Node`
 |-src
+
 |    |-index.js
+
 |    |-middlewares
 |    |   |-notFound.js
 |    |   |-error.js
