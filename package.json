@@ -1,0 +1,18 @@
+{
+  "name": "rest-api-with-node",
+  "version": "1.0.0",
+  "description": "REST API for CRUD operations with Node",
+  "main": "index.js",
+  "scripts": {
+    "server:up":"node index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "node"
+  ],
+  "author": "bijay-05",
+  "license": "ISC",
+  "devDependencies": {
+    "express": "^4.19.2"
+  }
+}
