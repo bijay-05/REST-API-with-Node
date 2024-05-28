@@ -4,35 +4,28 @@ In this project, we will create a REST API to perform CRUD operations on a Postg
 
 ## Directory Structure
 `REST-API-with-Node`
+ * [LICENSE](./LICENSE)
+ * [db](./db)
+   * [knexfile.js](./db/knexfile.js)
+   * [knex.js](./db/knex.js)
+ * [models](./models)
+   * [todoModels.js](./models/todoModels.js)
+ * [services](./services)
+   * [todoService.js](./services/todoService.js)
+ * [controllers](./controllers)
+   * [todoControllers.js](./controllers/todoControllers.js)
+ * [nodemon.json](./nodemon.json)
+ * [package-lock.json](./package-lock.json)
+ * [package.json](./package.json)
+ * [routes](./routes)
+   * [todoRoutes.js](./routes/todoRoutes.js)
+   * [index.js](./routes/index.js)
+ * [index.js](./index.js)
+ * [middlewares](./middlewares)
+   * [notFound.js](./middlewares/notFound.js)
+   * [errorHandler.js](./middlewares/errorHandler.js)
+ * [README.md](./README.md)
 
-├── controllers
-
-│   └── todoControllers.js
-
-├── db
-
-│   ├── knexfile.js
-
-│   └── knex.js
-
-├── index.js
-
-├── LICENSE
-
-├── middlewares
-│   ├── errorHandler.js
-│   └── notFound.js
-├── models
-│   └── todoModels.js
-├── nodemon.json
-├── package.json
-├── package-lock.json
-├── README.md
-├── routes
-│   ├── index.js
-│   └── todoRoutes.js
-└── services
-    └── todoService.js
 
 - routes consist of different end points for request
 - controllers are responsible for handling the request-response cycle
