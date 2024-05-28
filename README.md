@@ -4,17 +4,21 @@ In this project, we will create a REST API to perform CRUD operations on a Postg
 
 ## Directory Structure
 `REST-API-with-Node`
-├── controllers
 
+├── controllers
 
 │   └── todoControllers.js
 
-
 ├── db
+
 │   ├── knexfile.js
+
 │   └── knex.js
+
 ├── index.js
+
 ├── LICENSE
+
 ├── middlewares
 │   ├── errorHandler.js
 │   └── notFound.js
