@@ -2,9 +2,9 @@ import cors from 'cors';
 import dotenv from 'dotenv';
 import express from 'express';
 
-import appRouter from './routes';
-import { notFound } from './middlewares/notFound';
-import { errorHandler } from './middlewares/errorHandler';
+import router from './routes/todoRoutes.js';
+import { notFound } from './middlewares/notFound.js';
+import { errorHandler } from './middlewares/errorHandler.js';
 
 dotenv.config();
 
@@ -18,7 +18,7 @@ app.get('/', (req, res) => {
   res.send('API is running....');
 });
 
-app.use(appRouter);
+app.use(router);
 
 app.use(notFound);
 app.use(errorHandler);

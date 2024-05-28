@@ -1,7 +1,7 @@
-import * as todoService from '../services/toDoService';
+import * as todoService from '../services/todoServices.js';
 
 
-export const getAllTodos = async (req, res, next) => {
+export const getAllTodosc = async (req, res, next) => {
   try {
     const { todos, message } = await todoService.getAllTodos();
     res.json({ todos, message });
@@ -10,7 +10,7 @@ export const getAllTodos = async (req, res, next) => {
   }
 };
 
-export const createTodo = async (req, res, next) => {
+export const createTodoc = async (req, res, next) => {
   const todo = req.body;
   try {
     const { todo: createdTodo, message } = await todoService.createTodo(todo);
@@ -20,7 +20,7 @@ export const createTodo = async (req, res, next) => {
   }
 };
 
-export const getTodoById = async (req, res, next) => {
+export const getTodoByIdc = async (req, res, next) => {
   const id = parseInt(req.params.id);
   try {
     const { todo, message } = await todoService.getTodoById(id);
@@ -34,7 +34,7 @@ export const getTodoById = async (req, res, next) => {
   }
 };
 
-export const editTodo = async (req, res, next) => {
+export const editTodoc = async (req, res, next) => {
   const id = parseInt(req.params.id);
   const updatedTodo = req.body;
   try {
@@ -46,7 +46,7 @@ export const editTodo = async (req, res, next) => {
 };
 
 
-export const deleteTodo = async (req, res, next) => {
+export const deleteTodoc = async (req, res, next) => {
   const id = parseInt(req.params.id);
   try {
     const message = await todoService.deleteTodo(id);
