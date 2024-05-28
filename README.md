@@ -33,4 +33,10 @@ In this project, we will create a REST API to perform CRUD operations on a Postg
 - models deal with data in the database
 - middlewares for handling errors if the routes or URLs donot match 
 
-The functions in models are called in services and similarly, functions in one directory are imported in scripts just above its directory, in upward fashion as laid out in above hierarchy.
+The functions in models are called in services and similarly, functions in one directory are imported in scripts in other directory in below order.
+
+`models` => `services` => `controllers` => `routes` => `index.js`
+
+The request-response cycle follows below order.
+
+`index.js` => `routes` => `controllers` => `services` => `models`
