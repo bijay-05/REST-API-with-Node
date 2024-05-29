@@ -53,3 +53,13 @@ In this project, we will create a REST API to perform CRUD operations using Node
 The request-response cycle follows below order.
 
 `index.js` => `routes` => `controllers` => `services` => `models`
+
+### Testing the API with `thunderclient`
+
+1. Making `GET` request at `<ipaddress>:<port>/todo` endpoint.
+
+<img src='images/get.png' width="100%">
+
+2. Making `POST` request at `<ipaddress>:<port>/todo` endpoint.
+
+<img src='images/post.png' width="100%">
